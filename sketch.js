@@ -58,7 +58,6 @@ function checkReset() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  userStartAudio();
 
   textAlign(CENTER, CENTER);
   textSize(32);
