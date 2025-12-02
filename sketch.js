@@ -14,15 +14,6 @@ function preload() {
   daisyImg = loadImage('daisy.png');
 }
 
-function mousePressed() {
-  if (!started) {
-    userStartAudio();
-    mic = new p5.AudioIn();
-    mic.start();
-    started = true;
-  }
-}
-
 function resetWorld() {
   World.clear(world);
   Engine.clear(engine);
@@ -62,7 +53,12 @@ function setup() {
   textAlign(CENTER, CENTER);
   textSize(32);
   fill(255);
-  text("Click to start", width / 2, height / 2);
+  
+  // 一進來就啟動麥克風
+  userStartAudio();
+  mic = new p5.AudioIn();
+  mic.start();
+  started = true;
 
   engine = Engine.create();
   world = engine.world;

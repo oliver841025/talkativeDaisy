@@ -1,16 +1,5 @@
-html, body {
-    transform-origin: top left;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+body {
     padding: 0;
     margin: 0;
-    font-size: clamp(1rem, 2vw, 2rem);
-}
-
-/* 讓內容依照實際 iframe 寬度縮放 */
-@media (max-width: 900px) {
-  html {
-    transform: scale(calc(100vw / 900));
-  }
+    overflow: hidden;
 }
