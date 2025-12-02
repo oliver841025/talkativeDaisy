@@ -88,7 +88,7 @@ function draw() {
   let vol = mic.getLevel();
   let volSize = map(vol, 0, 1, 30, 500);
   
-  if (volSize > 31) {
+  if (volSize > 33) {
     let ball = Bodies.circle(random(50, width - 50), height / 2, volSize, {
       restitution: 0.7,
       friction: 0.1,
